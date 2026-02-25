@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Applicants</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="programs.html">Programs</a></li>
+<li><a href="admissions.html">Admissions</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="applicants.html" class="active">Applicants</a></li>
+</ul>
+</nav>
+
+<h2 style="text-align:center;">Saved Applicants</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Program</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="appTable"></tbody>
+</table>
+
+<div style="text-align:center;">
+<button onclick="clearAll()">Clear All</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

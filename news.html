@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATU News & Announcements</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="admission.html">Admissions</a>
+    <a href="news.html" class="active">News</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<section style="text-align:center; padding:30px;">
+    <h1>Latest News & Announcements</h1>
+    <p>Stay updated with happenings at ATU</p>
+</section>
+
+<!-- ================= FILTER DROPDOWN ================= -->
+<section style="text-align:center; margin-bottom:20px;">
+    <label>Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterNews()">
+        <option value="all">All</option>
+        <option value="academics">Academics</option>
+        <option value="events">Events</option>
+        <option value="sports">Sports</option>
+        <option value="admissions">Admissions</option>
+    </select>
+</section>
+
+<!-- ================= NEWS CARDS ================= -->
+<section class="news-container">
+
+    <!-- Academics -->
+    <div class="news-card" data-category="academics">
+        <h3>New Computer Lab Commissioned</h3>
+        <p>ATU has commissioned a state-of-the-art computer laboratory to enhance practical ICT learning.</p>
+    </div>
+
+    <div class="news-card" data-category="academics">
+        <h3>BTech Program Expansion</h3>
+        <p>The university has introduced new Bachelor of Technology programs for the 2026 academic year.</p>
+    </div>
+
+    <!-- Events -->
+    <div class="news-card" data-category="events">
+        <h3>Annual Tech Innovation Fair</h3>
+        <p>Students showcased innovative projects at the annual ATU Technology Innovation Fair.</p>
+    </div>
+
+    <div class="news-card" data-category="events">
+        <h3>Guest Lecture Series</h3>
+        <p>Industry experts delivered lectures on emerging technologies and entrepreneurship.</p>
+    </div>
+
+    <!-- Sports -->
+    <div class="news-card" data-category="sports">
+        <h3>ATU Wins Inter-University Games</h3>
+        <p>The ATU football team emerged champions in this year's inter-university tournament.</p>
+    </div>
+
+    <!-- Admissions -->
+    <div class="news-card" data-category="admissions">
+        <h3>2026 Admissions Open</h3>
+        <p>Online admissions portal is now open for prospective students nationwide.</p>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Accra Technical University | News & Media Unit</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

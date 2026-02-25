@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+  }
+
+  .university-header {
+    text-align: center;       
+    color: #0d4075;           
+    font-size: 2rem;         
+    font-weight: bold;        
+    margin: 15px 0;           
+    font-family: Arial, sans-serif; 
+    margin-bottom: 0px;
+  }
+
+  .university-motto {
+    text-align: center;       
+    color: #333;              
+    font-size: 1.2rem;        
+    font-style: italic;       
+    margin-bottom: 20px;      
+    font-family: Georgia, serif; 
+    color: #ffcc00;
+  
+  }
+  
+  /* NAVIGATION */
+  nav {
+    background: #003366;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+  }
+  
+  nav a.active,
+  nav a:hover {
+    background: #ffcc00;
+    color: black;
+    border-radius: 5px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* left logo, links container, right logo */
+    padding: 10px 20px;
+    background-color: #FFD;          /* example background */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  
+  .nav-logo {
+    height: 50px;              /* size of the logo */
+    pointer-events: none;      /* prevents hover/click effects */
+  }
+
+  
+  /* HERO */
+  /* Container */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;           /* adjust as needed */
+  overflow: hidden;
+}
+
+/* All slides stacked on top of each other */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;  /* smooth fade */
+}
+
+/* The active slide is visible */
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  
+  padding: 20px 35px;  
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+
+  text-align: center;
+  color: #fff;
+
+  width: fit-content;        
+  max-width: 80%;            
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  
+  padding: 20px 35px;  
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+
+  text-align: center;
+  color: #0d4075; 
+  width: fit-content;        
+  max-width: 80%;            
+}
+
+.slide-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .slide-text {
+      padding: 20px 30px;
+  }
+
+  .slide-text h1 {
+      font-size: 1.6rem;
+  }
+}
+.next-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: gold;
+    color: black;
+}
+  
+  /* CARDS */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* FORM */
+  form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 10px;
+    background: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .success {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* TABLE */
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* NEWS */
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .news-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  

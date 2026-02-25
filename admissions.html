@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATU Admissions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="admission.html" class="active">Admissions</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<section style="text-align:center; padding:30px;">
+    <h1>Online Admission Form</h1>
+    <p>Please complete the form below to apply to ATU.</p>
+</section>
+
+<!-- ================= ADMISSION FORM ================= -->
+<form id="admissionForm" onsubmit="return validateAdmission()">
+
+    <!-- Full Name -->
+    <label>Full Name</label>
+    <input type="text" id="fullname">
+    <div class="error"></div>
+
+    <!-- Email -->
+    <label>Email</label>
+    <input type="text" id="email">
+    <div class="error"></div>
+
+    <!-- Phone -->
+    <label>Phone Number</label>
+    <input type="text" id="phone" placeholder="0XXXXXXXXX or +233XXXXXXXXX">
+    <div class="error"></div>
+
+    <!-- Gender -->
+    <label>Gender</label>
+    <select id="gender">
+        <option value="">-- Select Gender --</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    <div class="error"></div>
+
+    <!-- Program -->
+    <label>Program</label>
+    <select id="program">
+        <option value="">-- Select Program --</option>
+        <option>Computer Science</option>
+        <option>Information Technology</option>
+        <option>Mechanical Engineering</option>
+        <option>Electrical Engineering</option>
+        <option>Accounting</option>
+        <option>Marketing</option>
+    </select>
+    <div class="error"></div>
+
+    <!-- WASSCE Index (Optional) -->
+    <label>WASSCE Index Number (Optional)</label>
+    <input type="text" id="wassce">
+    <div class="error"></div>
+
+    <br>
+    <button type="submit">Submit Application</button>
+
+    <div id="successMsg" class="success"></div>
+
+</form>
+
+<!-- ================= VIEW APPLICANTS LINK ================= -->
+<section style="text-align:center; margin:20px;">
+    <a href="applicants.html">
+        <button>View Applicants List</button>
+    </a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Accra Technical University | Admissions Office</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
