@@ -4,18 +4,23 @@ const slides = document.querySelectorAll(".slide");
 const totalSlides = slides.length;
 
 function showNextSlide() {
+  if (totalSlides === 0) return;
   slides[currentSlide].classList.remove("active");
   currentSlide = (currentSlide + 1) % totalSlides;
   slides[currentSlide].classList.add("active");
 }
 
 // Change slide every 5 seconds
-setInterval(showNextSlide, 5000);
-
-// Auto slide every 4 seconds
-setInterval(nextSlide, 4000);
+if (totalSlides > 0) {
+  setInterval(showNextSlide, 5000);
+}
 // ================= ADMISSION FORM =================
 function validateAdmission() {
+  const form = document.getElementById("admissionForm");
+  if (form && form.dataset.submitting === "true") {
+    return false;
+  }
+
   let valid = true;
 
   const name = document.getElementById("fullname");
@@ -55,7 +60,18 @@ function validateAdmission() {
 
   if (!valid) return false;
 
+  if (form) {
+    form.dataset.submitting = "true";
+  }
+
   saveApplicant();
+
+  if (form) {
+    setTimeout(() => {
+      form.dataset.submitting = "false";
+    }, 500);
+  }
+
   return false;
 }
 
@@ -64,6 +80,12 @@ function showError(input, message) {
 }
 
 function saveApplicant() {
+  const fullname = document.getElementById("fullname");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const gender = document.getElementById("gender");
+  const program = document.getElementById("program");
+
   const applicant = {
     name: fullname.value,
     email: email.value,
@@ -77,8 +99,8 @@ function saveApplicant() {
   applicants.push(applicant);
   localStorage.setItem("applicants", JSON.stringify(applicants));
 
-  document.getElementById("successMsg").innerText = 
-  "Application saved successfully";ggiufuir
+  document.getElementById("successMsg").innerText =
+    "Application saved successfully";
 
   document.getElementById("admissionForm").reset();
 }
@@ -96,6 +118,8 @@ function loadApplicants() {
     table.innerHTML += `
       <tr>
         <td>${app.name}</td>
+        <td>${app.email}</td>
+        <td>${app.phone}</td>
         <td>${app.program}</td>
         <td><button onclick="deleteApplicant(${i})">Delete</button></td>
       </tr>
@@ -104,7 +128,7 @@ function loadApplicants() {
 }
 
 function deleteApplicant(index) {
-  let applicants = JSON.parse(localStorage.getItem("applicants"));
+  let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
   applicants.splice(index,1);
   localStorage.setItem("applicants", JSON.stringify(applicants));
   loadApplicants();
@@ -117,7 +141,10 @@ function clearAll() {
 
 // ================= NEWS FILTER =================
 function filterNews() {
-  let category = document.getElementById("categoryFilter").value;
+  const categoryFilter = document.getElementById("categoryFilter");
+  if (!categoryFilter) return;
+
+  let category = categoryFilter.value;
   let cards = document.querySelectorAll(".news-card");
 
   cards.forEach(card => {
@@ -128,3 +155,7 @@ function filterNews() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadApplicants();
+});
