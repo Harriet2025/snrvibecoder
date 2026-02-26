@@ -282,8 +282,22 @@
   }
 
   .why-icon {
-    font-size: 2.5rem;
-    margin-bottom: 14px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 14px;
+    border-radius: 14px;
+    background: #edf3fb;
+    color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
 
   .why-card h3 {
@@ -643,8 +657,22 @@
   }
   
   .empty-icon {
-    font-size: 3.5rem;
-    margin-bottom: 12px;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 12px;
+    border-radius: 16px;
+    background: #edf3fb;
+    color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .empty-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
   
   .empty-state h3 {
@@ -769,8 +797,22 @@
   }
 
   .vmv-icon {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    border-radius: 14px;
+    background: #edf3fb;
+    color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vmv-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
 
   .vmv-card h3 {
@@ -896,8 +938,22 @@
   }
 
   .level-icon {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 12px;
+    border-radius: 14px;
+    background: #edf3fb;
+    color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .level-icon svg {
+    width: 27px;
+    height: 27px;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
 
   .level-card h3 {
@@ -952,7 +1008,22 @@
   .school-header.arts { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
 
   .school-icon {
-    font-size: 1.8rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .school-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
 
   .school-header h3 {

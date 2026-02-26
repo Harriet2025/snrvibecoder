@@ -78,7 +78,12 @@
             <tbody id="appTable"></tbody>
         </table>
         <div class="empty-state" id="emptyState">
-            <div class="empty-icon">📋</div>
+            <div class="empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="6" y="4" width="12" height="17" rx="2"/>
+                    <path d="M9 4.5h6v3H9zM9 11h6M9 15h4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
             <h3>No Applicants Yet</h3>
             <p>Applications submitted through the <a href="admissions.html">Admissions</a> page will appear here.</p>
         </div>
