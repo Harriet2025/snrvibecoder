@@ -1,42 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Applicants</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>ATU - Applicants</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="programs.html">Programs</a></li>
-<li><a href="admissions.html">Admissions</a></li>
-<li><a href="news.html">News</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="applicant.html" class="active">Applicants</a></li>
-</ul>
-</nav>
+    <nav>
+        <a href="index.html">
+            <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+        </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="applicant.html" class="active">Applicants</a>
+        <a href="index.html">
+            <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+        </a>
+    </nav>
 
-<h2 style="text-align:center;">Saved Applicants</h2>
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Applicant Records</h1>
+        <p>View and manage all submitted applications</p>
+    </section>
 
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Email</th>
-<th>Phone</th>
-<th>Program</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody id="appTable"></tbody>
-</table>
+    <!-- Stats Summary -->
+    <div class="applicant-stats" id="applicantStats">
+        <div class="stat-card">
+            <span class="stat-number" id="totalCount">0</span>
+            <span class="stat-label">Total Applicants</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="maleCount">0</span>
+            <span class="stat-label">Male</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="femaleCount">0</span>
+            <span class="stat-label">Female</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="programCount">0</span>
+            <span class="stat-label">Programs Applied</span>
+        </div>
+    </div>
 
-<div style="text-align:center;">
-<button onclick="clearAll()">Clear All</button>
-</div>
+    <!-- Search & Filter Bar -->
+    <div class="applicant-toolbar">
+        <input type="text" id="searchInput" placeholder="Search by name, email, or program..."
+            oninput="filterApplicants()">
+        <select id="programFilter" onchange="filterApplicants()">
+            <option value="all">All Programs</option>
+        </select>
+        <button class="btn-export" onclick="exportCSV()">Export CSV</button>
+        <button class="btn-clear" onclick="clearAll()">Clear All</button>
+    </div>
 
-<script src="js/main.js"></script>
+    <!-- Applicant Table -->
+    <div class="applicant-table-wrapper">
+        <table class="applicant-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Program</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="appTable"></tbody>
+        </table>
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">📋</div>
+            <h3>No Applicants Yet</h3>
+            <p>Applications submitted through the <a href="admissions.html">Admissions</a> page will appear here.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Follow Us: Facebook | Twitter | Instagram</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

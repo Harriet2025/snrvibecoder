@@ -1,97 +1,167 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ATU Programs & Departments</title>
+    <title>ATU Programs &amp; Departments</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 <nav>
+    <a href="index.html">
+        <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+    </a>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html" class="active">Programs</a>
     <a href="admissions.html">Admissions</a>
     <a href="news.html">News</a>
     <a href="contact.html">Contact</a>
+    <a href="applicant.html">Applicant</a>
+    <a href="index.html">
+        <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+    </a>
 </nav>
 
-<!-- ================= PAGE HEADER ================= -->
-<section style="padding:40px; text-align:center;">
-    <h1>Programs & Departments</h1>
-    <p>Explore our wide range of career-focused academic programs.</p>
+<!-- University Header Strip -->
+<div class="university-strip">
+    <span class="uni-name">ACCRA TECHNICAL UNIVERSITY</span>
+    <span class="uni-motto">Integrity, Creativity &amp; Excellence</span>
+</div>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="page-banner">
+    <h1>Academic Programmes</h1>
+    <p>Explore our career-focused programmes designed for the modern workforce</p>
 </section>
 
-<!-- ================= PROGRAM CARDS ================= -->
-<section class="cards">
-
-    <!-- Engineering -->
-    <div class="card">
-        <h2>School of Engineering</h2>
-        <ul style="text-align:left; margin-top:10px;">
-            <li>Mechanical Engineering</li>
-            <li>Electrical/Electronic Engineering</li>
-            <li>Civil Engineering</li>
-            <li>Computer Engineering</li>
-        </ul>
+<!-- ================= PROGRAMME LEVELS ================= -->
+<section class="prog-levels">
+    <div class="section-header">
+        <h2>Programme Levels</h2>
+        <p>ATU offers qualifications at multiple levels to suit your academic journey</p>
     </div>
-
-    <!-- Applied Sciences -->
-    <div class="card">
-        <h2>School of Applied Sciences</h2>
-        <ul style="text-align:left; margin-top:10px;">
-            <li>Computer Science</li>
-            <li>Information Technology</li>
-            <li>Statistics</li>
-            <li>Environmental Science</li>
-        </ul>
+    <div class="levels-grid">
+        <div class="level-card">
+            <div class="level-icon">&#x1F4D8;</div>
+            <h3>Diploma</h3>
+            <p>Foundation-level programmes providing essential technical knowledge and practical skills for entry-level careers.</p>
+        </div>
+        <div class="level-card">
+            <div class="level-icon">&#x1F4D9;</div>
+            <h3>Higher National Diploma</h3>
+            <p>Advanced hands-on training with industry attachments, preparing students for supervisory and technical roles.</p>
+        </div>
+        <div class="level-card">
+            <div class="level-icon">&#x1F393;</div>
+            <h3>Bachelor of Technology</h3>
+            <p>Comprehensive degree programmes combining theory and practice, accredited by the National Accreditation Board.</p>
+        </div>
+        <div class="level-card">
+            <div class="level-icon">&#x1F4DA;</div>
+            <h3>Top-Up Programmes</h3>
+            <p>Accelerated pathways for HND holders to upgrade to a full BTech degree in their field of study.</p>
+        </div>
     </div>
-
-    <!-- Business -->
-    <div class="card">
-        <h2>School of Business</h2>
-        <ul style="text-align:left; margin-top:10px;">
-            <li>Accounting</li>
-            <li>Marketing</li>
-            <li>Procurement & Supply Chain</li>
-            <li>Banking & Finance</li>
-        </ul>
-    </div>
-
-    <!-- Creative Arts -->
-    <div class="card">
-        <h2>School of Creative Arts</h2>
-        <ul style="text-align:left; margin-top:10px;">
-            <li>Graphic Design</li>
-            <li>Fashion Design</li>
-            <li>Industrial Art</li>
-            <li>Multimedia Technology</li>
-        </ul>
-    </div>
-
 </section>
 
-<!-- ================= ADDITIONAL INFO ================= -->
-<section style="padding:40px; max-width:1000px; margin:auto;">
-    <h2>Programme Levels</h2>
-    <p>
-        ATU offers programmes at the following levels:
-    </p>
-    <ul style="margin-left:20px; margin-top:10px;">
-        <li>Diploma</li>
-        <li>Higher National Diploma (HND)</li>
-        <li>Bachelor of Technology (BTech)</li>
-        <li>Top-Up Programmes</li>
-    </ul>
+<!-- ================= SCHOOLS / FACULTIES ================= -->
+<section class="schools-section">
+    <div class="section-header">
+        <h2>Our Schools &amp; Faculties</h2>
+        <p>Four distinguished schools offering over 50 programmes across diverse disciplines</p>
+    </div>
+
+    <div class="schools-grid">
+
+        <!-- Engineering -->
+        <div class="school-card">
+            <div class="school-header engineering">
+                <span class="school-icon">&#x2699;</span>
+                <h3>School of Engineering</h3>
+            </div>
+            <div class="school-body">
+                <p>Training the next generation of engineers with state-of-the-art labs and industry partnerships.</p>
+                <ul class="prog-list">
+                    <li><span class="prog-badge">BTech</span> Mechanical Engineering</li>
+                    <li><span class="prog-badge">BTech</span> Electrical/Electronic Engineering</li>
+                    <li><span class="prog-badge">BTech</span> Civil Engineering</li>
+                    <li><span class="prog-badge">BTech</span> Computer Engineering</li>
+                    <li><span class="prog-badge">HND</span> Refrigeration &amp; Air Conditioning</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Applied Sciences -->
+        <div class="school-card">
+            <div class="school-header sciences">
+                <span class="school-icon">&#x1F52C;</span>
+                <h3>School of Applied Sciences</h3>
+            </div>
+            <div class="school-body">
+                <p>Advancing knowledge in science and technology through research-driven programmes.</p>
+                <ul class="prog-list">
+                    <li><span class="prog-badge">BTech</span> Computer Science</li>
+                    <li><span class="prog-badge">BTech</span> Information Technology</li>
+                    <li><span class="prog-badge">BTech</span> Statistics</li>
+                    <li><span class="prog-badge">BTech</span> Environmental Science</li>
+                    <li><span class="prog-badge">HND</span> Food Science Technology</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Business -->
+        <div class="school-card">
+            <div class="school-header business">
+                <span class="school-icon">&#x1F4BC;</span>
+                <h3>School of Business</h3>
+            </div>
+            <div class="school-body">
+                <p>Developing business leaders and entrepreneurs equipped for the global economy.</p>
+                <ul class="prog-list">
+                    <li><span class="prog-badge">BTech</span> Accounting</li>
+                    <li><span class="prog-badge">BTech</span> Marketing</li>
+                    <li><span class="prog-badge">BTech</span> Procurement &amp; Supply Chain</li>
+                    <li><span class="prog-badge">BTech</span> Banking &amp; Finance</li>
+                    <li><span class="prog-badge">HND</span> Secretaryship &amp; Management</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Creative Arts -->
+        <div class="school-card">
+            <div class="school-header arts">
+                <span class="school-icon">&#x1F3A8;</span>
+                <h3>School of Creative Arts</h3>
+            </div>
+            <div class="school-body">
+                <p>Nurturing creative talent with modern studios and industry-standard tools.</p>
+                <ul class="prog-list">
+                    <li><span class="prog-badge">BTech</span> Graphic Design</li>
+                    <li><span class="prog-badge">BTech</span> Fashion Design &amp; Textiles</li>
+                    <li><span class="prog-badge">BTech</span> Industrial Art</li>
+                    <li><span class="prog-badge">BTech</span> Multimedia Technology</li>
+                    <li><span class="prog-badge">HND</span> Hospitality Management</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="prog-cta">
+    <h2>Ready to Begin Your Journey?</h2>
+    <p>Apply now and join thousands of students building their future at ATU</p>
+    <a href="admissions.html" class="cta-btn">Apply for Admission</a>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 Accra Technical University | Excellence in Technical Education</p>
+    <p>&copy; 2026 Accra Technical University | Excellence in Technical Education</p>
 </footer>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>

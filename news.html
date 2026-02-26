@@ -1,85 +1,135 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ATU News & Announcements</title>
+    <title>ATU News &amp; Announcements</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 <nav>
+    <a href="index.html">
+        <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+    </a>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
     <a href="admissions.html">Admissions</a>
     <a href="news.html" class="active">News</a>
     <a href="contact.html">Contact</a>
+    <a href="applicant.html">Applicant</a>
+    <a href="index.html">
+        <img src="images/Atu_logo.png" alt="ATU Logo" class="nav-logo">
+    </a>
 </nav>
 
-<!-- ================= PAGE HEADER ================= -->
-<section style="text-align:center; padding:30px;">
-    <h1>Latest News & Announcements</h1>
-    <p>Stay updated with happenings at ATU</p>
+<!-- University Header Strip -->
+<div class="university-strip">
+    <span class="uni-name">ACCRA TECHNICAL UNIVERSITY</span>
+    <span class="uni-motto">Integrity, Creativity &amp; Excellence</span>
+</div>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="page-banner">
+    <h1>News &amp; Announcements</h1>
+    <p>Stay informed with the latest happenings at Accra Technical University</p>
 </section>
 
-<!-- ================= FILTER DROPDOWN ================= -->
-<section style="text-align:center; margin-bottom:20px;">
-    <label>Filter by Category:</label>
-    <select id="categoryFilter" onchange="filterNews()">
-        <option value="all">All</option>
-        <option value="academics">Academics</option>
-        <option value="events">Events</option>
-        <option value="sports">Sports</option>
-        <option value="admissions">Admissions</option>
-    </select>
-</section>
+<!-- ================= FILTER BAR ================= -->
+<div class="news-filter-bar">
+    <span class="filter-label">Filter by:</span>
+    <button class="filter-btn active" onclick="filterNews2('all', this)">All</button>
+    <button class="filter-btn" onclick="filterNews2('academics', this)">Academics</button>
+    <button class="filter-btn" onclick="filterNews2('events', this)">Events</button>
+    <button class="filter-btn" onclick="filterNews2('sports', this)">Sports</button>
+    <button class="filter-btn" onclick="filterNews2('admissions', this)">Admissions</button>
+</div>
 
-<!-- ================= NEWS CARDS ================= -->
-<section class="news-container">
+<!-- ================= NEWS GRID ================= -->
+<section class="news-grid">
 
-    <!-- Academics -->
-    <div class="news-card" data-category="academics">
-        <h3>New Computer Lab Commissioned</h3>
-        <p>ATU has commissioned a state-of-the-art computer laboratory to enhance practical ICT learning.</p>
-    </div>
+    <!-- Featured / Lead Story -->
+    <article class="news-item featured" data-category="academics">
+        <div class="news-badge">Featured</div>
+        <div class="news-date">
+            <span class="date-day">15</span>
+            <span class="date-month">Feb 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag academics">Academics</span>
+            <h3>New State-of-the-Art Computer Lab Commissioned</h3>
+            <p>ATU has officially opened a modern 200-seat computer laboratory equipped with high-performance workstations, virtual reality stations, and cloud computing infrastructure to enhance practical ICT learning across all departments.</p>
+        </div>
+    </article>
 
-    <div class="news-card" data-category="academics">
-        <h3>BTech Program Expansion</h3>
-        <p>The university has introduced new Bachelor of Technology programs for the 2026 academic year.</p>
-    </div>
+    <article class="news-item" data-category="academics">
+        <div class="news-date">
+            <span class="date-day">10</span>
+            <span class="date-month">Feb 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag academics">Academics</span>
+            <h3>BTech Programme Expansion for 2026</h3>
+            <p>The university has introduced five new Bachelor of Technology programmes including Biomedical Engineering and Data Science, expanding academic choices for prospective students.</p>
+        </div>
+    </article>
 
-    <!-- Events -->
-    <div class="news-card" data-category="events">
-        <h3>Annual Tech Innovation Fair</h3>
-        <p>Students showcased innovative projects at the annual ATU Technology Innovation Fair.</p>
-    </div>
+    <article class="news-item" data-category="events">
+        <div class="news-date">
+            <span class="date-day">05</span>
+            <span class="date-month">Feb 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag events">Events</span>
+            <h3>Annual Tech Innovation Fair 2026</h3>
+            <p>Over 150 student teams showcased innovative engineering, software, and design projects at the 12th Annual ATU Technology Innovation Fair, attracting industry scouts and investors.</p>
+        </div>
+    </article>
 
-    <div class="news-card" data-category="events">
-        <h3>Guest Lecture Series</h3>
-        <p>Industry experts delivered lectures on emerging technologies and entrepreneurship.</p>
-    </div>
+    <article class="news-item" data-category="events">
+        <div class="news-date">
+            <span class="date-day">28</span>
+            <span class="date-month">Jan 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag events">Events</span>
+            <h3>Distinguished Guest Lecture Series</h3>
+            <p>Industry leaders from MTN Ghana, Vodafone, and Ghana Grid Company delivered lectures on emerging technologies, AI, and sustainable energy to final-year students.</p>
+        </div>
+    </article>
 
-    <!-- Sports -->
-    <div class="news-card" data-category="sports">
-        <h3>ATU Wins Inter-University Games</h3>
-        <p>The ATU football team emerged champions in this year's inter-university tournament.</p>
-    </div>
+    <article class="news-item" data-category="sports">
+        <div class="news-date">
+            <span class="date-day">20</span>
+            <span class="date-month">Jan 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag sports">Sports</span>
+            <h3>ATU Wins Inter-University Championship</h3>
+            <p>The ATU football team emerged champions at the 2026 GUSA inter-university games, defeating University of Cape Coast 3-1 in a thrilling final at the Accra Sports Stadium.</p>
+        </div>
+    </article>
 
-    <!-- Admissions -->
-    <div class="news-card" data-category="admissions">
-        <h3>2026 Admissions Open</h3>
-        <p>Online admissions portal is now open for prospective students nationwide.</p>
-    </div>
+    <article class="news-item" data-category="admissions">
+        <div class="news-date">
+            <span class="date-day">01</span>
+            <span class="date-month">Jan 2026</span>
+        </div>
+        <div class="news-content">
+            <span class="news-tag admissions">Admissions</span>
+            <h3>2026/2027 Admissions Portal Now Open</h3>
+            <p>The online admissions portal is now accepting applications for the 2026/2027 academic year. Prospective students can apply for all diploma, HND, and BTech programmes through the ATU website.</p>
+        </div>
+    </article>
 
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2026 Accra Technical University | News & Media Unit</p>
+    <p>&copy; 2026 Accra Technical University | News &amp; Media Unit</p>
 </footer>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>
